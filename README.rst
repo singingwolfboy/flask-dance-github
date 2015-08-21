@@ -2,9 +2,13 @@ Flask-Dance Example App: GitHub Edition
 =======================================
 
 This repository provides an example of how to use `Flask-Dance`_ to connect
-to `GitHub`_ as an OAuth client. You can run it for free on `Heroku`_ as a test,
-and then fork it and make whatever modifications you want. If you want to
-run it on Heroku, here's what to do:
+to `GitHub`_ as an OAuth client. You can run it locally, or deploy it to Heroku
+for free to see how it runs in a production-style environment.
+
+Heroku Installation
+```````````````````
+`Heroku`_ is a great way to get up and running fast, and you don't even need
+to open the terminal!
 
 Step 1: Deploy to Heroku
 ------------------------
@@ -61,8 +65,53 @@ immediately be redirected to login with GitHub!
 time you try to log in, it fails. If this happens to you, simply try it a
 second time, and it should succeed.
 
-Step 5: Learn more!
--------------------
+Local Installation
+``````````````````
+If you'd prefer to run this locally on your computer, you can do that as well.
+
+Step 1: Get OAuth credentials from GitHub
+-----------------------------------------
+Visit https://github.com/settings/applications/new to register an
+application on GitHub. You must set the application's authorization
+callback URL to ``http://localhost:5000/login/github/authorized``.
+
+Once you've registered your application on GitHub, GitHub will give you a
+client ID and client secret, which we'll use in the next step.
+
+Step 2: Set environment variables
+---------------------------------
+Many applications use `environment variables`_ for configuration, and
+Flask-Dance is no exception. You'll need to set the following environment
+variables:
+
+* ``GITHUB_OAUTH_CLIENT_ID``: set this to the client ID you got from GitHub.
+* ``GITHUB_OAUTH_CLIENT_SECRET``: set this to the client secret you got from GitHub.
+* ``OAUTHLIB_INSECURE_TRANSPORT``: set this to ``true``. This indicates that
+  you're doing local testing, and it's OK to use HTTP instead of HTTPS for
+  OAuth. You should only do this for local testing.
+  Do **not** set this in production!
+
+How you set these variables depends on your operating system. For Mac/Linux, you
+can use the `export`_ command. For Windows, you can use the `SET`_ command. If
+you don't want to worry about this, you can create a ``.env`` file with
+your environment variables, and use `foreman`_ to run your app. This repository
+has a ``.env.example`` file that you can copy.
+
+Step 3: Run your app!
+---------------------
+If you're setting environment variables manually, run your app using Python::
+
+    python github.py
+
+If you're using a ``.env`` file for your environment variables, install `foreman`_
+and use that to run your app::
+
+    foreman start
+
+Then, go to http://localhost:5000/ to visit your app and log in with GitHub!
+
+Learn more!
+```````````
 `Fork this GitHub repo`_ so that you can make changes to it. Read the
 documentation for `Flask`_ and `Flask-Dance`_ to learn what's possible.
 Ask questions, learn as you go, build your own OAuth-enabled web application,
@@ -73,7 +122,11 @@ and don't forget to be awesome!
 .. _Flask-Dance: http://flask-dance.readthedocs.org/
 .. _GitHub: https://github.com/
 .. _Heroku: https://www.heroku.com/
+.. _environment variables: https://en.wikipedia.org/wiki/Environment_variable
+.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
+.. _export: http://ss64.com/bash/export.html
+.. _SET: http://ss64.com/nt/set.html
+
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
    :alt: Deploy to Heroku
-.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
