@@ -76,7 +76,21 @@ application on GitHub. You must set the application's authorization
 callback URL to ``http://localhost:5000/login/github/authorized``.
 
 Once you've registered your application on GitHub, GitHub will give you a
-client ID and client secret, which we'll use in the next step.
+client ID and client secret, which we'll use in step 3.
+
+Step 1: Install code and dependencies
+-------------------------------------
+Run the following commands on your computer:
+
+    git clone https://github.com/singingwolfboy/flask-dance-github.git
+    cd flask-dance-github
+    pyvenv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+
+These commands will clone this git repository onto your computer,
+create a `virtual environment`_ for this project, activate it, and install
+the dependencies listed in ``requirements.txt``.
 
 Step 2: Set environment variables
 ---------------------------------
@@ -123,10 +137,11 @@ and don't forget to be awesome!
 .. _GitHub: https://github.com/
 .. _Heroku: https://www.heroku.com/
 .. _environment variables: https://en.wikipedia.org/wiki/Environment_variable
-.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
 .. _export: http://ss64.com/bash/export.html
 .. _SET: http://ss64.com/nt/set.html
 .. _foreman: https://github.com/ddollar/foreman
+.. _virtual environment: https://docs.python.org/3.5/library/venv.html
+.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
 
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
