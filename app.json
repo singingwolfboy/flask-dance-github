@@ -6,17 +6,18 @@
   ],
   "website": "https://github.com/singingwolfboy/flask-dance-github",
   "repository": "https://github.com/singingwolfboy/flask-dance-github",
-  "success_url": "/",
   "env": {
     "FLASK_SECRET_KEY": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
     "GITHUB_OAUTH_CLIENT_ID": {
-      "description": "The OAuth client ID for your application, assigned by GitHub"
+      "description": "The OAuth client ID for your application, assigned by GitHub",
+      "required": false
     },
     "GITHUB_OAUTH_CLIENT_SECRET": {
-      "description": "The OAuth client secret for your application, assigned by GitHub"
+      "description": "The OAuth client secret for your application, assigned by GitHub",
+      "required": false
     }
   }
 }
