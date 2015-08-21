@@ -78,7 +78,7 @@ callback URL to ``http://localhost:5000/login/github/authorized``.
 Once you've registered your application on GitHub, GitHub will give you a
 client ID and client secret, which we'll use in step 3.
 
-Step 1: Install code and dependencies
+Step 2: Install code and dependencies
 -------------------------------------
 Run the following commands on your computer:
 
@@ -92,7 +92,7 @@ These commands will clone this git repository onto your computer,
 create a `virtual environment`_ for this project, activate it, and install
 the dependencies listed in ``requirements.txt``.
 
-Step 2: Set environment variables
+Step 3: Set environment variables
 ---------------------------------
 Many applications use `environment variables`_ for configuration, and
 Flask-Dance is no exception. You'll need to set the following environment
@@ -111,7 +111,7 @@ you don't want to worry about this, you can create a ``.env`` file with
 your environment variables, and use `foreman`_ to run your app. This repository
 has a ``.env.example`` file that you can copy.
 
-Step 3: Run your app!
+Step 4: Run your app!
 ---------------------
 If you're setting environment variables manually, run your app using Python::
 
