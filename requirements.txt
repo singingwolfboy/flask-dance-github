@@ -1,2 +1,2 @@
-git+https://github.com/singingwolfboy/flask-dance.git@42a4bc6607981496aa832d261c0f44d11862900f#egg=flask-dance
+flask-dance
 gunicorn
