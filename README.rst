@@ -42,9 +42,11 @@ You'll need click the "Reveal Config Vars" button to see which variables
 are available, and then the "Edit" button to allow you to change these variables.
 
 Take the client ID you got from GitHub, and paste it into the "VALUE" field
-next to the ``GITHUB_OAUTH_CLIENT_ID`` field. Similarly, take the client secret
-you got from GitHub, and paste it into the "VALUE" field next to the
-``GITHUB_OAUTH_CLIENT_SECRET`` field. Click the "Save" button when you're done.
+next to the ``GITHUB_OAUTH_CLIENT_ID`` field, replacing the dummy value that
+was there before. Similarly, take the client secret you got from GitHub,
+and paste it into the "VALUE" field next to the ``GITHUB_OAUTH_CLIENT_SECRET``
+field, replacing the dummy value that was there before.
+Click the "Save" button when you're done.
 
 Step 4: Visit your app and login with GitHub!
 ---------------------------------------------

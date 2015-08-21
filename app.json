@@ -13,10 +13,12 @@
     },
     "GITHUB_OAUTH_CLIENT_ID": {
       "description": "The OAuth client ID for your application, assigned by GitHub",
+      "value": "client-id-goes-here",
       "required": false
     },
     "GITHUB_OAUTH_CLIENT_SECRET": {
       "description": "The OAuth client secret for your application, assigned by GitHub",
+      "value": "client-secret-goes-here",
       "required": false
     }
   }
