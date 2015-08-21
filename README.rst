@@ -2,7 +2,7 @@ Flask-Dance Example App: GitHub Edition
 =======================================
 
 This repository provides an example of how to use `Flask-Dance`_ to connect
-to GitHub as an OAuth client. You can run it for free on `Heroku`_ as a test,
+to `GitHub`_ as an OAuth client. You can run it for free on `Heroku`_ as a test,
 and then fork it and make whatever modifications you want. If you want to
 run it on Heroku, here's what to do:
 
@@ -64,6 +64,7 @@ and don't forget to be awesome!
 
 .. _Flask: http://flask.pocoo.org/docs/
 .. _Flask-Dance: http://flask-dance.readthedocs.org/
+.. _GitHub: https://github.com/
 .. _Heroku: https://www.heroku.com/
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
