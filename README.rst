@@ -105,7 +105,7 @@ variables:
 * ``OAUTHLIB_INSECURE_TRANSPORT``: set this to ``true``. This indicates that
   you're doing local testing, and it's OK to use HTTP instead of HTTPS for
   OAuth. You should only do this for local testing.
-  Do **not** set this in production!
+  Do **not** set this in production! [`oauthlib docs`_]
 
 How you set these variables depends on your operating system. For Mac/Linux, you
 can use the `export`_ command. For Windows, you can use the `SET`_ command. If
@@ -139,6 +139,7 @@ and don't forget to be awesome!
 .. _GitHub: https://github.com/
 .. _Heroku: https://www.heroku.com/
 .. _environment variables: https://en.wikipedia.org/wiki/Environment_variable
+.. _oauthlib docs: http://oauthlib.readthedocs.org/en/latest/oauth2/security.html#envvar-OAUTHLIB_INSECURE_TRANSPORT
 .. _export: http://ss64.com/bash/export.html
 .. _SET: http://ss64.com/nt/set.html
 .. _foreman: https://github.com/ddollar/foreman
@@ -148,3 +149,4 @@ and don't forget to be awesome!
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
    :alt: Deploy to Heroku
+
