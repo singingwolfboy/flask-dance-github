@@ -1,0 +1,71 @@
+Flask-Dance Example App: GitHub Edition
+=======================================
+
+This repository provides an example of how to use `Flask-Dance`_ to connect
+to GitHub as an OAuth client. You can run it for free on `Heroku`_ as a test,
+and then fork it and make whatever modifications you want. If you want to
+run it on Heroku, here's what to do:
+
+Step 1: Deploy to Heroku
+------------------------
+It's easy, and it's free! Just click on this button:
+
+|heroku-deploy|
+
+You can leave all the fields blank: we'll fill them in later. The only thing
+that matters right now is the app name, which Heroku can autogenerate for you
+if you'd like. Just take note of what it is.
+
+Step 2: Get OAuth credentials from GitHub
+-----------------------------------------
+Visit https://github.com/settings/applications/new to register an
+application on GitHub. In order to register the application, you'll need that
+app name from Heroku. The GitHub application's authorization callback URL
+must be ``https://APPNAME.herokuapp.com/login/github/authorized``. For example,
+if Heroku assigned you an app name of ``peaceful-lake``, your authorization
+callback URL must be
+``https://peaceful-lake.herokuapp.com/login/github/authorized``.
+
+Once you've registered your application on GitHub, GitHub will give you a
+client ID and client secret, which we'll use in the next step.
+
+Step 3: Give OAuth credentials to your app on Heroku
+----------------------------------------------------
+Go to Heroku and visit the settings page for your app. On that page, there
+should be a section called "Config Variables" where you can manage the config
+vars for your application. You'll need click the "Reveal Config Vars" button
+to see which variables are available, and then the "Edit" button to allow you
+to change these variables.
+
+Take the client ID you got from GitHub, and paste it into the "VALUE" field
+next to the ``GITHUB_OAUTH_CLIENT_ID`` field. Similarly, take the client secret
+you got from GitHub, and paste it into the "VALUE" field next to the
+``GITHUB_OAUTH_CLIENT_SECRET`` field. Click the "Save" button when you're done.
+
+Step 4: Visit your app and login with GitHub!
+---------------------------------------------
+Your app name from Heroku will determine the URL that your app is running on:
+the URL will be ``https://APPNAME.herokuapp.com``. For example, if Heroku
+assigned you an app name of ``peaceful-lake``, your app will be available at
+``https://peaceful-lake.herokuapp.com``. Visit that URL, and you should
+immediately be redirected to login with GitHub!
+
+**NOTE:** There seems to be a bug with GitHub's OAuth system where the first
+time you try to log in, it fails. If this happens to you, simply try it a
+second time, and it should succeed.
+
+Step 5: Learn more!
+-------------------
+`Fork this GitHub repo`_ so that you can make changes to it. Read the
+documentation for `Flask`_ and `Flask-Dance`_ to learn what's possible.
+Ask questions, learn as you go, build your own OAuth-enabled web application,
+and don't forget to be awesome!
+
+
+.. _Flask: http://flask.pocoo.org/docs/
+.. _Flask-Dance: http://flask-dance.readthedocs.org/
+.. _Heroku: https://www.heroku.com/
+.. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
+   :target: https://heroku.com/deploy
+   :alt: Deploy to Heroku
+.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
