@@ -111,8 +111,8 @@ you don't want to worry about this, you can create a ``.env`` file with
 your environment variables, and use `foreman`_ to run your app. This repository
 has a ``.env.example`` file that you can copy.
 
-Step 4: Run your app!
----------------------
+Step 4: Run your app and login with GitHub!
+-------------------------------------------
 If you're setting environment variables manually, run your app using Python::
 
     python github.py
