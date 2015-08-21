@@ -80,7 +80,7 @@ client ID and client secret, which we'll use in step 3.
 
 Step 2: Install code and dependencies
 -------------------------------------
-Run the following commands on your computer:
+Run the following commands on your computer::
 
     git clone https://github.com/singingwolfboy/flask-dance-github.git
     cd flask-dance-github
