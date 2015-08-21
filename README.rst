@@ -126,6 +126,7 @@ and don't forget to be awesome!
 .. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
 .. _export: http://ss64.com/bash/export.html
 .. _SET: http://ss64.com/nt/set.html
+.. _foreman: https://github.com/ddollar/foreman
 
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
