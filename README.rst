@@ -16,6 +16,9 @@ You can leave all the fields blank: we'll fill them in later. The only thing
 that matters right now is the app name, which Heroku can autogenerate for you
 if you'd like. Just take note of what it is.
 
+Note that your app isn't functional yet, and if you try to visit it right now,
+you'll end up at a GitHub 404 page. That's OK, we're not done yet!
+
 Step 2: Get OAuth credentials from GitHub
 -----------------------------------------
 Visit https://github.com/settings/applications/new to register an
@@ -31,11 +34,12 @@ client ID and client secret, which we'll use in the next step.
 
 Step 3: Give OAuth credentials to your app on Heroku
 ----------------------------------------------------
-Go to Heroku and visit the settings page for your app. On that page, there
-should be a section called "Config Variables" where you can manage the config
-vars for your application. You'll need click the "Reveal Config Vars" button
-to see which variables are available, and then the "Edit" button to allow you
-to change these variables.
+Go to Heroku and visit the settings page for your app. (You can get there from
+your Heroku dashboard, or by clicking on the "Manage App" button after the
+deploy step is finished.) On that page, there should be a section called
+"Config Variables" where you can manage the config vars for your application.
+You'll need click the "Reveal Config Vars" button to see which variables
+are available, and then the "Edit" button to allow you to change these variables.
 
 Take the client ID you got from GitHub, and paste it into the "VALUE" field
 next to the ``GITHUB_OAUTH_CLIENT_ID`` field. Similarly, take the client secret
