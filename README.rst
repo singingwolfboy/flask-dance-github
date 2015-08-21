@@ -2,8 +2,10 @@ Flask-Dance Example App: GitHub Edition
 =======================================
 
 This repository provides an example of how to use `Flask-Dance`_ to connect
-to `GitHub`_ as an OAuth client. You can run it locally, or deploy it to Heroku
-for free to see how it runs in a production-style environment.
+to `GitHub`_ as an OAuth client. The example code is in ``github.py`` --
+all the other files in this repository are secondary. You can run this example
+code locally, or deploy it to Heroku for free to see how it runs in a
+production-style environment.
 
 Heroku Installation
 ```````````````````
