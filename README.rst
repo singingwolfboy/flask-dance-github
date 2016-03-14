@@ -63,10 +63,6 @@ assigned you an app name of ``peaceful-lake``, your app will be available at
 ``https://peaceful-lake.herokuapp.com``. Visit that URL, and you should
 immediately be redirected to login with GitHub!
 
-**NOTE:** There seems to be a bug with GitHub's OAuth system where the first
-time you try to log in, it fails. If this happens to you, simply try it a
-second time, and it should succeed.
-
 Local Installation
 ``````````````````
 If you'd prefer to run this locally on your computer, you can do that as well.
