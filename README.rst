@@ -82,7 +82,7 @@ Run the following commands on your computer::
 
     git clone https://github.com/singingwolfboy/flask-dance-github.git
     cd flask-dance-github
-    pyvenv venv
+    python3 -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
 
@@ -139,7 +139,7 @@ and don't forget to be awesome!
 .. _export: http://ss64.com/bash/export.html
 .. _SET: http://ss64.com/nt/set.html
 .. _foreman: https://github.com/ddollar/foreman
-.. _virtual environment: https://docs.python.org/3.5/library/venv.html
+.. _virtual environment: https://docs.python.org/3.7/library/venv.html
 .. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
 
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
