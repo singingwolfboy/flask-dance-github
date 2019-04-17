@@ -4,12 +4,14 @@ Automated Tests
 To run the tests, you need to install two Python packages:
 Pytest_ and Betamax_. You can install them with ``pip``, like this:
 
-.. code-block: bash
+.. code-block:: bash
+
     pip install pytest betamax
 
 Then you can run the tests using the ``pytest`` command:
 
-.. code-block: bash
+.. code-block:: bash
+
     pytest
 
 Fixtures
