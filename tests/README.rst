@@ -17,7 +17,7 @@ Then you can run the tests using the ``pytest`` command:
 Fixtures
 --------
 
-The ``conftest.py`` file contains the Pytest fixtures that
+The ``conftest.py`` file contains the `Pytest fixtures`_ that
 the tests use. Notice how the ``app`` fixture wraps the Betamax
 tool around the ``github`` session from Flask-Dance. This allows
 the tests to record and replay HTTP requests.
@@ -36,3 +36,4 @@ variable, and the automated tests will automatically pick it up.
 
 .. _Pytest: https://pytest.org/
 .. _Betamax: https://betamax.readthedocs.io/
+.. _Pytest fixtures: https://docs.pytest.org/en/latest/fixture.html
