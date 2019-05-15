@@ -1,3 +1,7 @@
+import pytest
+
+
+@pytest.mark.usefixtures("betamax_record_flask_dance")
 def test_index_authorized(app):
     with app.test_client() as client:
         response = client.get("/", base_url="https://example.com")

@@ -31,30 +31,14 @@ def github_storage(monkeypatch):
 
 
 @pytest.fixture
-def app(request):
-    """
-    Wraps the Flask app with `before_request` and `after_request` functions
-    which activate Betamax on the `github` Flask-Dance session
-    during incoming HTTP requests.
-    """
-
-    @flask_app.before_request
-    def wrap_github_with_betamax():
-        recorder = Betamax(
-            github, cassette_library_dir=toplevel / "tests" / "cassettes"
-        )
-        recorder.use_cassette(request.node.name)
-        recorder.start()
-
-        @flask_app.after_request
-        def unwrap(response):
-            recorder.stop()
-            return response
-
-        request.addfinalizer(lambda: flask_app.after_request_funcs[None].remove(unwrap))
-
-    request.addfinalizer(
-        lambda: flask_app.before_request_funcs[None].remove(wrap_github_with_betamax)
-    )
-
+def app():
     return flask_app
+
+
+@pytest.fixture
+def flask_dance_sessions():
+    """
+    Necessary to use the ``betamax_record_flask_dance`` fixture
+    from Flask-Dance
+    """
+    return github
