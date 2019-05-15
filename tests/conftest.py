@@ -19,8 +19,8 @@ with Betamax.configure() as config:
     config.define_cassette_placeholder("<AUTH_TOKEN>", GITHUB_ACCESS_TOKEN)
 
 
-@pytest.fixture(autouse=True)
-def github_storage(monkeypatch):
+@pytest.fixture
+def github_authorized(monkeypatch):
     """
     Monkeypatch the GitHub Flask-Dance blueprint so that the
     OAuth token is always set.
