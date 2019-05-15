@@ -18,9 +18,13 @@ Fixtures
 --------
 
 The ``conftest.py`` file contains the `Pytest fixtures`_ that
-the tests use. Notice how the ``app`` fixture wraps the Betamax
-tool around the ``github`` session from Flask-Dance. This allows
-the tests to record and replay HTTP requests.
+the tests use. We want to use the ``betamax_record_flask_dance``
+fixture `provided by Flask-Dance
+<https://flask-dance.readthedocs.io/en/latest/testing.html#module-flask_dance.fixtures.pytest>`_,
+so we define an ``app`` fixture and a ``flask_dance_sessions``
+fixture. We also define a ``github_authorized`` fixture,
+which will use a ``MemoryStorage`` object to tell Flask-Dance
+that the user is already authorized with GitHub.
 
 Cassettes
 ---------
