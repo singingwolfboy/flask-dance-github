@@ -46,7 +46,8 @@ your Heroku dashboard, or by clicking on the "Manage App" button after the
 deploy step is finished.) On that page, there should be a section called
 "Config Variables" where you can manage the config vars for your application.
 You'll need click the "Reveal Config Vars" button to see which variables
-are available, and then the "Edit" button to allow you to change these variables.
+are available, and then the "Edit" button to allow you to change these
+variables.
 
 Take the client ID you got from GitHub, and paste it into the "VALUE" field
 next to the ``GITHUB_OAUTH_CLIENT_ID`` field, replacing the dummy value that
@@ -148,4 +149,3 @@ and don't forget to be awesome!
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
    :alt: Deploy to Heroku
-
